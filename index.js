@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 reader.onload = () => {
                     const bytes = new Uint8Array(reader.result);
                     const map = new Map(bytes);
+                    console.log(map);
                     const json = JSON.stringify(map, null, "\t");
                     downloadJSON(json, fileName.replace(".map", ".json"));                    
                 };
